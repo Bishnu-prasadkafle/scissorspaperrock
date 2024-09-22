@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPR Game</title>
+  </head>
+  <body>
+    <script>
+      let player = prompt("Enter S P R");
+      let computer = Math.floor(Math.random() * 3);
+      let computer1 = ["S", "P", "R"][computer];
+
+      const match = (computer1, player) => {
+        if (computer1 === player) return "Nobody";
+        else if (computer1 === "S" && player === "R") {
+          return "player";
+        } else if (computer1 === "p" && player === "R") {
+          return "player";
+        } else if (computer1 === "R" && player === "S") {
+          return "computer1";
+        } else if (computer1 === "R" && player === "P") {
+          return "computer1";
+        } else if (computer1 === "R" && player === "S") {
+          return "computer1";
+        } else if (computer1 === "p" && player === "S") {
+          return "player";
+        }
+      };
+      let result = match(computer1, player);
+
+      document.write(
+        `computer1:${computer1} <br> player:${player} <br>The winner is : ${result}`
+      );
+    </script>
+  </body>
+</html>
